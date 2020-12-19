@@ -11,15 +11,15 @@ import BonMot
 class ViewController: UIViewController {
     @IBOutlet weak var showHostInfoView: UIView!
     @IBOutlet weak var textBannerView: UIView!
-    @IBOutlet weak var noticeLabelView: UIView!
+    @IBOutlet weak var brcastNoticeLabelView: UIView!
     @IBOutlet weak var showHostInfoLabel: UILabel!
     @IBOutlet weak var textBannerLabel: UILabel!
-    @IBOutlet weak var noticeLabel: UILabel!
-    @IBOutlet weak var noticeView: UIView!
-    @IBOutlet weak var noticeSeeMoreView: UIView!
-    @IBOutlet weak var noticeSeeMoreLabel: UILabel!
-    @IBOutlet weak var noticeLabelTrailingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var noticeDetailButton: UIButton!
+    @IBOutlet weak var brcastNoticeLabel: UILabel!
+    @IBOutlet weak var brcastNoticeView: UIView!
+    @IBOutlet weak var brcastNoticeSeeMoreView: UIView!
+    @IBOutlet weak var brcastNoticeSeeMoreLabel: UILabel!
+    @IBOutlet weak var brcastNoticeLabelTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var brcastNoticeDetailButton: UIButton!
     
     var attributedStringShadow: NSShadow = {
       let shadow = NSShadow()
@@ -58,42 +58,42 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.showHostInfoLabel.text = "\n"
-        self.noticeLabel.text = "\n"
+        self.brcastNoticeLabel.text = "\n"
 
         print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
         
 //        self.showHostInfoView.isHidden = false
-//        self.noticeView.isHidden = false
+        self.brcastNoticeView.isHidden = false
 
 //        self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
 
-//        let noticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.noticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
-//        self.noticeLabel.attributedText = noticeAttributedString
-//        self.noticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
+        let brcastNoticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.brcastNoticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
+        self.brcastNoticeLabel.attributedText = brcastNoticeAttributedString
+        self.brcastNoticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
 
         DispatchQueue.main.async {
             print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
             if self.showHostInfoLabel.frame.size.height > 50 {
-                self.noticeLabel.numberOfLines = 2
+                self.brcastNoticeLabel.numberOfLines = 2
             }
         }
         
         DispatchQueue.main.async {
-            print("noticeLabel height", self.noticeLabel.frame.size.height)
-            if self.noticeLabel.frame.size.height > 50 {
-                self.noticeSeeMoreView.isHidden = false
-                self.noticeLabel.numberOfLines = 2
-                self.noticeLabelTrailingConstraint.constant = 80
-                self.noticeDetailButton.isEnabled = true
+            print("brcastNoticeLabel height", self.brcastNoticeLabel.frame.size.height)
+            if self.brcastNoticeLabel.frame.size.height > 50 {
+                self.brcastNoticeSeeMoreView.isHidden = false
+                self.brcastNoticeLabel.numberOfLines = 2
+                self.brcastNoticeLabelTrailingConstraint.constant = 80
+                self.brcastNoticeDetailButton.isEnabled = true
             }
         }
     }
 
-    @IBAction func tapnoticeDetailButton(_ sender: Any) {
+    @IBAction func tapbrcastNoticeDetailButton(_ sender: Any) {
         print(#function)
     }
     
-    func noticeAttributeText(image: String, baselineOffset: CGFloat, message: String) -> NSAttributedString {
+    func brcastNoticeAttributeText(image: String, baselineOffset: CGFloat, message: String) -> NSAttributedString {
       let attributedString: NSAttributedString = {
         let textStyle = StringStyle(
           .font(.systemFont(ofSize: 17)),

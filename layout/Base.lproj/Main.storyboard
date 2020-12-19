@@ -68,13 +68,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-I4-kAE" userLabel="noticeView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-I4-kAE" userLabel="brcastNoticeView">
                                 <rect key="frame" x="12" y="162.5" width="302" height="195"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEe-1A-GqG" userLabel="noticeSeeMoreView">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEe-1A-GqG" userLabel="brcastNoticeSeeMoreView">
                                         <rect key="frame" x="232" y="171" width="70" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더보기 &gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r20-Hg-SGW" userLabel="noticeSeeMoreLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더보기 &gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r20-Hg-SGW" userLabel="brcastNoticeSeeMoreLabel">
                                                 <rect key="frame" x="4" y="0.0" width="62" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -91,10 +91,10 @@
                                             <constraint firstAttribute="width" constant="70" id="hyc-WK-IkX"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-Gj-Rrs" userLabel="noticeLabelView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-Gj-Rrs" userLabel="brcastNoticeLabelView">
                                         <rect key="frame" x="0.0" y="0.0" width="302" height="195"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR1-Z9-6Ah" userLabel="noticeLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR1-Z9-6Ah" userLabel="brcastNoticeLabel">
                                                 <rect key="frame" x="8" y="6" width="286" height="183"/>
                                                 <string key="text">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -115,10 +115,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbv-A8-D42" userLabel="noticeDetailButton">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbv-A8-D42" userLabel="brcastNoticeDetailButton">
                                         <rect key="frame" x="0.0" y="0.0" width="302" height="195"/>
                                         <connections>
-                                            <action selector="tapnoticeDetailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xdQ-Ku-wa3"/>
+                                            <action selector="tapbrcastNoticeDetailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xdQ-Ku-wa3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -152,13 +152,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="noticeDetailButton" destination="zbv-A8-D42" id="cUc-MN-9Td"/>
-                        <outlet property="noticeLabel" destination="fR1-Z9-6Ah" id="78u-GE-vFN"/>
-                        <outlet property="noticeLabelTrailingConstraint" destination="D2L-QV-NrS" id="ruF-pi-hyt"/>
-                        <outlet property="noticeLabelView" destination="cjL-Gj-Rrs" id="AHk-6h-Ryf"/>
-                        <outlet property="noticeSeeMoreLabel" destination="r20-Hg-SGW" id="apk-LZ-s0D"/>
-                        <outlet property="noticeSeeMoreView" destination="wEe-1A-GqG" id="Wxw-5n-XnX"/>
-                        <outlet property="noticeView" destination="ByR-I4-kAE" id="oDo-YJ-1NH"/>
+                        <outlet property="brcastNoticeDetailButton" destination="zbv-A8-D42" id="cUc-MN-9Td"/>
+                        <outlet property="brcastNoticeLabel" destination="fR1-Z9-6Ah" id="78u-GE-vFN"/>
+                        <outlet property="brcastNoticeLabelTrailingConstraint" destination="D2L-QV-NrS" id="ruF-pi-hyt"/>
+                        <outlet property="brcastNoticeLabelView" destination="cjL-Gj-Rrs" id="AHk-6h-Ryf"/>
+                        <outlet property="brcastNoticeSeeMoreLabel" destination="r20-Hg-SGW" id="apk-LZ-s0D"/>
+                        <outlet property="brcastNoticeSeeMoreView" destination="wEe-1A-GqG" id="Wxw-5n-XnX"/>
+                        <outlet property="brcastNoticeView" destination="ByR-I4-kAE" id="oDo-YJ-1NH"/>
                         <outlet property="showHostInfoLabel" destination="wCu-kL-lW1" id="mOS-hZ-DJY"/>
                         <outlet property="showHostInfoView" destination="g7u-Gl-3pD" id="erf-Eh-3fG"/>
                         <outlet property="textBannerLabel" destination="zpg-4v-XDH" id="GLD-he-pBF"/>
