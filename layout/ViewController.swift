@@ -57,15 +57,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        showHostInfoLabel.text = "\n\n"
+        self.showHostInfoLabel.text = "\n"
+        self.noticeLabel.text = "\n"
+
         print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
-        noticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
-        showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
-        showHostInfoView.isHidden = false
         
-        let noticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.noticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
-        self.noticeLabel.attributedText = noticeAttributedString
-        
+//        self.showHostInfoView.isHidden = false
+//        self.noticeView.isHidden = false
+
+//        self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
+
+//        let noticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.noticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
+//        self.noticeLabel.attributedText = noticeAttributedString
+//        self.noticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
+
         DispatchQueue.main.async {
             print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
             if self.showHostInfoLabel.frame.size.height > 50 {

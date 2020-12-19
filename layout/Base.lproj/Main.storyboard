@@ -45,7 +45,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgO-I4-ffH">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgO-I4-ffH">
                                 <rect key="frame" x="12" y="110" width="302" height="40.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label LabelLabel LabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-4v-XDH">
@@ -68,8 +68,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-I4-kAE" userLabel="noticeView">
-                                <rect key="frame" x="12" y="158.5" width="302" height="195"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-I4-kAE" userLabel="noticeView">
+                                <rect key="frame" x="12" y="162.5" width="302" height="195"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEe-1A-GqG" userLabel="noticeSeeMoreView">
                                         <rect key="frame" x="232" y="171" width="70" height="24"/>
@@ -145,7 +145,7 @@
                             <constraint firstItem="g7u-Gl-3pD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="DN1-LE-lQ5"/>
                             <constraint firstItem="ByR-I4-kAE" firstAttribute="leading" secondItem="XgO-I4-ffH" secondAttribute="leading" id="Ebr-8I-Kbv"/>
                             <constraint firstItem="XgO-I4-ffH" firstAttribute="top" secondItem="g7u-Gl-3pD" secondAttribute="bottom" constant="12" id="Eh2-LU-ggt"/>
-                            <constraint firstItem="ByR-I4-kAE" firstAttribute="top" secondItem="XgO-I4-ffH" secondAttribute="bottom" constant="8" symbolic="YES" id="K9s-ny-oFd"/>
+                            <constraint firstItem="ByR-I4-kAE" firstAttribute="top" secondItem="XgO-I4-ffH" secondAttribute="bottom" constant="12" id="K9s-ny-oFd"/>
                             <constraint firstItem="XgO-I4-ffH" firstAttribute="leading" secondItem="g7u-Gl-3pD" secondAttribute="leading" id="sET-gK-gIk"/>
                             <constraint firstItem="XgO-I4-ffH" firstAttribute="trailing" secondItem="g7u-Gl-3pD" secondAttribute="trailing" id="u04-PR-Kig"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g7u-Gl-3pD" secondAttribute="trailing" constant="100" id="wPG-30-XX9"/>
@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.608695652173921" y="37.5"/>
+            <point key="canvasLocation" x="282.60869565217394" y="-90.401785714285708"/>
         </scene>
     </scenes>
     <resources>
