@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var brcastNoticeLabelTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var brcastNoticeDetailButton: UIButton!
     
-    var adminView = [UIView]()
+    var adminInfoView = [UIView]()
     
     var attributedStringShadow: NSShadow = {
       let shadow = NSShadow()
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.configAdminView()
+        self.configAdminInfoView()
 
         self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
 
@@ -70,17 +70,17 @@ class ViewController: UIViewController {
         self.brcastNoticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
     }
     
-    func configAdminView() {
-        adminView.append(self.showHostInfoView)
-        adminView.append(self.textBannerView)
-        adminView.append(self.brcastNoticeView)
+    func configAdminInfoView() {
+        adminInfoView.append(self.showHostInfoView)
+        adminInfoView.append(self.textBannerView)
+        adminInfoView.append(self.brcastNoticeView)
 
         self.showHostInfoLabel.text = "\n"
         self.brcastNoticeLabel.text = "\n"
 
         print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
         
-        _ = self.adminView.map { view in view.isHidden = false }
+        _ = self.adminInfoView.map { view in view.isHidden = false }
         
         DispatchQueue.main.async {
             print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
