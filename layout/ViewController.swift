@@ -10,16 +10,20 @@ import BonMot
 
 class ViewController: UIViewController {
     @IBOutlet weak var showHostInfoView: UIView!
-    @IBOutlet weak var textBannerView: UIView!
-    @IBOutlet weak var brcastNoticeLabelView: UIView!
     @IBOutlet weak var showHostInfoLabel: UILabel!
+    
+    @IBOutlet weak var textBannerView: UIView!
     @IBOutlet weak var textBannerLabel: UILabel!
-    @IBOutlet weak var brcastNoticeLabel: UILabel!
+
     @IBOutlet weak var brcastNoticeView: UIView!
+    @IBOutlet weak var brcastNoticeLabelView: UIView!
+    @IBOutlet weak var brcastNoticeLabel: UILabel!
     @IBOutlet weak var brcastNoticeSeeMoreView: UIView!
     @IBOutlet weak var brcastNoticeSeeMoreLabel: UILabel!
     @IBOutlet weak var brcastNoticeLabelTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var brcastNoticeDetailButton: UIButton!
+    
+    var adminView = [UIView]()
     
     var attributedStringShadow: NSShadow = {
       let shadow = NSShadow()
@@ -57,20 +61,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.configAdminView()
+
+        self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
+
+        let brcastNoticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.brcastNoticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
+        self.brcastNoticeLabel.attributedText = brcastNoticeAttributedString
+        self.brcastNoticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
+    }
+    
+    func configAdminView() {
+        adminView.append(self.showHostInfoView)
+        adminView.append(self.textBannerView)
+        adminView.append(self.brcastNoticeView)
+
         self.showHostInfoLabel.text = "\n"
         self.brcastNoticeLabel.text = "\n"
 
         print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
         
-//        self.showHostInfoView.isHidden = false
-        self.brcastNoticeView.isHidden = false
-
-//        self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
-
-        let brcastNoticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.brcastNoticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
-        self.brcastNoticeLabel.attributedText = brcastNoticeAttributedString
-        self.brcastNoticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
-
+        _ = self.adminView.map { view in view.isHidden = false }
+        
         DispatchQueue.main.async {
             print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
             if self.showHostInfoLabel.frame.size.height > 50 {
@@ -92,7 +103,9 @@ class ViewController: UIViewController {
     @IBAction func tapbrcastNoticeDetailButton(_ sender: Any) {
         print(#function)
     }
-    
+}
+
+extension ViewController {
     func brcastNoticeAttributeText(image: String, baselineOffset: CGFloat, message: String) -> NSAttributedString {
       let attributedString: NSAttributedString = {
         let textStyle = StringStyle(
@@ -119,4 +132,3 @@ class ViewController: UIViewController {
       return attributedString
     }
 }
-
