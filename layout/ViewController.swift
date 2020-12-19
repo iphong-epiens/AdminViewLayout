@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var brcastNoticeLabelTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var brcastNoticeDetailButton: UIButton!
     
-    var adminInfoView = [UIView]()
+    var adminInfoViewArray = [UIView]()
     
     var attributedStringShadow: NSShadow = {
       let shadow = NSShadow()
@@ -72,11 +72,11 @@ class ViewController: UIViewController {
     }
     
     func configAdminInfoView() {
-        adminInfoView.append(self.showHostInfoView)
-        adminInfoView.append(self.textBannerView)
-        adminInfoView.append(self.brcastNoticeView)
+        adminInfoViewArray.append(self.showHostInfoView)
+        adminInfoViewArray.append(self.textBannerView)
+        adminInfoViewArray.append(self.brcastNoticeView)
 
-        _ = self.adminInfoView.map { view in view.isHidden = false }
+        _ = self.adminInfoViewArray.map { view in view.isHidden = false }
 
         self.showHostInfoLabel.text = "\n"
         self.brcastNoticeLabel.text = "\n"
