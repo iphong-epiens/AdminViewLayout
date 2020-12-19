@@ -63,8 +63,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.configAdminInfoView()
 
-        self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."
-
+        self.showHostInfoLabel.text = "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id do"
+        self.showHostInfoLabel.numberOfLines = 2
+        
         let brcastNoticeAttributedString: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.brcastNoticeAttributeText(image: "iconManagerYellowSm", baselineOffset: 4, message: "Nullam id dolor id nibh ultricies vehicula ut id elit.Nullam id dolor id nibh ultricies vehicula ut id elit."))
         self.brcastNoticeLabel.attributedText = brcastNoticeAttributedString
         self.brcastNoticeSeeMoreLabel.attributedText = NSAttributedString(attributedString: seeMoreStr)
