@@ -75,19 +75,10 @@ class ViewController: UIViewController {
         adminInfoView.append(self.textBannerView)
         adminInfoView.append(self.brcastNoticeView)
 
+        _ = self.adminInfoView.map { view in view.isHidden = false }
+
         self.showHostInfoLabel.text = "\n"
         self.brcastNoticeLabel.text = "\n"
-
-        print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
-        
-        _ = self.adminInfoView.map { view in view.isHidden = false }
-        
-        DispatchQueue.main.async {
-            print("showHostInfoLabel height", self.showHostInfoLabel.frame.size.height)
-            if self.showHostInfoLabel.frame.size.height > 50 {
-                self.brcastNoticeLabel.numberOfLines = 2
-            }
-        }
         
         DispatchQueue.main.async {
             print("brcastNoticeLabel height", self.brcastNoticeLabel.frame.size.height)
